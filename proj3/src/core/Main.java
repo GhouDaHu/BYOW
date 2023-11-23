@@ -29,39 +29,35 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        initWindow();
-        boolean gameOver = false;
-        while (true) {
-
-            showMainMenu();
-            if (StdDraw.hasNextKeyTyped()) {
-                char key = Character.toLowerCase(StdDraw.nextKeyTyped());
-                switch (key) {
-                    case 'n':
-                        newGame();
-                        break;
-                    case 'l':
-                        loadGame();
-                        break;
-                    case 'q':
-                        gameOver = quitGame();
-                        break;
-                    default:
-                }
-            }
-            if (gameOver) {
-                break;
-            }
-
-        }
+//        initWindow();
+//        boolean gameOver = false;
+//        while (true) {
+//
+//            showMainMenu();
+//            if (StdDraw.hasNextKeyTyped()) {
+//                char key = Character.toLowerCase(StdDraw.nextKeyTyped());
+//                switch (key) {
+//                    case 'n':
+//                        newGame();
+//                        break;
+//                    case 'l':
+//                        loadGame();
+//                        break;
+//                    case 'q':
+//                        gameOver = quitGame();
+//                        break;
+//                    default:
+//                }
+//            }
+//            if (gameOver) {
+//                break;
+//            }
+//
+//        }
 
         GameRunner runner = new GameRunner();
         runner.init();
         runner.run();
-    }
-
-    private void run(Context context) {
-        context.globalState.onEntered();
     }
 
     private static boolean quitGame() {

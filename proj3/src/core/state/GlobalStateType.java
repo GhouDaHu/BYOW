@@ -5,5 +5,6 @@ public enum GlobalStateType {
     LOADING,
     MAIN_MENU,
     SAVING,
-    TERMINATED
+    TERMINATED,
+    GETTING_SEED,
 }

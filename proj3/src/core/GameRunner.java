@@ -12,10 +12,10 @@ public class GameRunner {
 
     public void run(Context context) {
         AssertUtils.notNull(context, "context");
-        IGlobalState globalState = context.getGlobalState();
-        AssertUtils.notNull(globalState, "globalState");
 
         while (!context.isOver()) {
+            IGlobalState globalState = context.getGlobalState();
+            AssertUtils.notNull(globalState, "globalState");
             globalState.onEntered(context);
         }
     }
